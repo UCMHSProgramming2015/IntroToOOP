@@ -36,4 +36,19 @@ class Ball {
       vel.y *= -1;
     }
   }
+
+  void wrap() {
+    if (loc.x >width) {
+      loc.x=0;
+    }
+    if (loc.x <0) {
+      loc.x = width;
+    }
+    if (loc.y >height) {
+      loc.y=0;
+    }
+    if (loc.y<0) {
+      loc.y=height;
+    }
+  }
 }
