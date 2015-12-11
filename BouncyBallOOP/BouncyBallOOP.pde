@@ -1,11 +1,20 @@
+int count =4;
 Ball b;                //declare a new ball called b
-
+Ball c;
+Ball[] balls = new Ball[count];
 void setup() {
-  size(1600, 1200);
-  b = new Ball();      //initialize b as a new object of the Ball class
+  size(800, 800);
+  for (int i=0; i<count; i++) {
+    balls[i] = new Ball(20);      //initialize b as a new object of the Ball class
+    balls[i] = new Ball(45);
+  }
 }
 
 void draw() {
   background(0);
-  b.display();         //call b's display() method
+  for (int i=0; i<count; i++) {
+    balls[i].display();         //call b's display() method
+    balls[i].move();    //Gives ball movement
+    balls[i].bounce();    //Balls do not fly off screen
+  }
 }
