@@ -9,6 +9,8 @@ class Ball {
     diam = 200;
     loc = new PVector(random(diam, width-diam), random(diam, height-diam));
     c = color(random(255), random(50), random(100, 255));
+    vel = PVector.random2D();
+    vel.mult(20);
   }
 
 //after declaring fields and setting up constructors, you can define your methods
