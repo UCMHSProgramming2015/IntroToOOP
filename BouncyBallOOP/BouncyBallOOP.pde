@@ -12,4 +12,6 @@ void draw() {
   c.display();
   b.move();    //Gives ball movement
   c.move();
+  b.bounce();    //Balls do not fly off screen
+  c.bounce();
 }
