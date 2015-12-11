@@ -10,4 +10,6 @@ void draw() {
   background(0);
   b.display();         //call b's display() method
   c.display();
+  b.move();    //Gives ball movement
+  c.move();
 }
